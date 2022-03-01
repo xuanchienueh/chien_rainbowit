@@ -7,6 +7,48 @@ $res_pc: "only screen and (min-width: 1181px)";
 @include responsive_pc {
     header {
         .navbar {
+            .navbar-nav {
+                .nav-item {
+                    position: relative;
+                    &:hover .submenu {
+                        display: block;
+                    }
+                    .submenu {
+                        display: none;
+                        transition: all 0.5s;
+                        position: absolute;
+                        left: 0;
+                        top: 36px;
+                        width: 240px;
+                        background-color: white;
+                        border-radius: 8px;
+                        padding: 16px 0;
+                        li {
+                            margin-left: 16px;
+                            margin-right: 16px;
+                            padding: 5px 0;
+                            border-radius: 4px;
+                            &:hover {
+                                background-color: rgba(253, 71, 102, 0.1);
+                                a {
+                                    color: #fd4766;
+                                    text-decoration: none;
+                                    font-weight: 600;
+                                }
+                            }
+                            a {
+                                color: #1f1f25;
+                                transition: all 0.5s;
+                                margin-left: 16px;
+                                font-size: 0.9rem;
+                                width: 100%;
+                                display: block;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
             .menu,
             .nav_mobile {
                 display: none;
