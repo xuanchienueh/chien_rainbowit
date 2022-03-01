@@ -23,6 +23,8 @@ button.btn-primary-my {
   .section_title span.subtitle {
     text-align: center;
     background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, #fd4766 79.69%);
+    font-weight: 600;
+    line-height: 18px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text; }
   .section_title h2 {
@@ -234,26 +236,40 @@ header .navbar-collapse .navbar-nav {
 #clients {
   padding: 50px 0; }
   #clients .clients_content .row {
-    border: 1px solid rgba(0, 0, 0, 0.05); }
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
     #clients .clients_content .row li {
       display: block;
       padding: 50px 0;
       cursor: pointer;
-      border: 1px solid rgba(0, 0, 0, 0.05);
       height: 225px;
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s; }
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      position: relative; }
+      #clients .clients_content .row li::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: -1; }
       #clients .clients_content .row li img {
         margin-left: 50%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
         width: 40%; }
       #clients .clients_content .row li:hover {
-        -webkit-transform: scale(1.2, 1.2);
-                transform: scale(1.2, 1.2);
+        -webkit-transform: scale(1.1, 1.1);
+                transform: scale(1.1, 1.1);
         background-color: #fd4766;
         border: none;
         border-radius: 12px; }
+        #clients .clients_content .row li:hover::after {
+          border-radius: 12px;
+          border: none; }
 
 #footer {
   background-color: black;
