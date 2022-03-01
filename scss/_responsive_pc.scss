@@ -1,0 +1,37 @@
+$res_pc: "only screen and (min-width: 1181px)";
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+@include responsive_pc {
+    header {
+        .navbar {
+            .menu,
+            .nav_mobile {
+                display: none;
+            }
+        }
+    }
+    #banner {
+        .carousel-item {
+            .carousel-caption {
+                button {
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
+    #service {
+        .service {
+            .service_content {
+                .service_item {
+                    transition: all 0.5s;
+                    &:hover {
+                        transform: translateY(-4px);
+                    }
+                }
+            }
+        }
+    }
+}

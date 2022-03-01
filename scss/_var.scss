@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+// đặt biến
+$primary_color: #fd4766;
+$border-color: #ffffff33;
+
+$p-color: rgba(29, 29, 36, 0.75);
+
+@mixin centerx {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+@mixin centery {
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+
+button.btn-primary-my {
+    background-color: $primary_color;
+    color: #fff;
+    border-radius: 28px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    font-weight: 600;
+    &:hover {
+        background-color: #fff;
+        border: 1px solid $primary_color;
+    }
+}
+.section_title {
+    text-align: center;
+    span.subtitle {
+        text-align: center;
+        background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%, $primary_color 79.69%);
+        font-weight: 600;
+        line-height: 18px;
+    }
+    h2 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 16px;
+    }
+    p {
+        color: $p-color;
+        width: 48%;
+        @include centerx;
+        margin-top: 12px;
+        margin-bottom: 50px;
+    }
+}

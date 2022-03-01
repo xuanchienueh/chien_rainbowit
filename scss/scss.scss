@@ -1,0 +1,280 @@
+@import "var";
+
+header {
+    .navbar {
+        position: absolute;
+        z-index: 1;
+        .navbar-brand {
+            img {
+                width: 60%;
+            }
+        }
+        form {
+            button {
+                color: #fff;
+                border-radius: 20px;
+                border: 1px solid $border-color;
+                padding: 12px 32px;
+                &:hover {
+                    background-color: $primary_color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            gap: 0 20px;
+            .nav-item {
+                .nav-link {
+                    color: #fff;
+                    &:hover {
+                        color: $primary_color;
+                    }
+                }
+            }
+        }
+    }
+}
+#banner {
+    position: relative;
+    z-index: 0;
+    .carousel {
+        .carousel-item {
+            img {
+                width: 100%;
+                height: 90%;
+            }
+            .carousel-caption {
+                top: 36%;
+                h1 {
+                    font-size: 5rem;
+                    font-weight: 900;
+                }
+                p {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            span {
+                display: block;
+                width: 68px;
+                height: 68px;
+                border-radius: 50%;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                transition: all 0.5s;
+                &:hover {
+                    background-color: $primary_color;
+                }
+                img {
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .carousel-control-prev .arrow_prev:hover {
+            margin-right: 40px;
+        }
+        .carousel-control-next .arrow_next:hover {
+            margin-left: 40px;
+        }
+        .carousel-indicators {
+            li {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                margin: auto 6px;
+            }
+            li.active {
+                width: 12px;
+                height: 12px;
+                border: 2px solid $primary_color;
+                border-radius: 50%;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+#service {
+    padding: 50px 0;
+    .services_title {
+    }
+    .service_content {
+        .service_item {
+            margin-bottom: 30px;
+            .background {
+                padding: 40px 30px;
+                background-color: #f6f6f6;
+                border-radius: 16px;
+                .icon {
+                    margin-bottom: 16px;
+                    svg {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+                .service_item_title {
+                }
+            }
+        }
+    }
+}
+
+#project {
+    padding: 40px 0;
+    .project {
+        .project_content {
+            .project_item {
+                position: relative;
+                transition: all 0.5s;
+                overflow: hidden;
+                margin-bottom: 30px;
+                .content {
+                    position: absolute;
+                    bottom: -40px;
+                    left: 0;
+                    right: 0;
+                    z-index: 2;
+                    text-align: center;
+                    transition: all 0.5s;
+                    h6,
+                    p {
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                    h3 {
+                        color: #fff;
+                        margin-bottom: 44px;
+                    }
+                    p.hover_content {
+                        margin-top: -32px;
+                        transition: all 0.5s;
+                        opacity: 0;
+                        // transform: translateY(138px);
+                    }
+                }
+                &::after {
+                    border-radius: 12px;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 15px;
+                    right: 15px;
+                    background-image: linear-gradient(to top, $primary-color, black);
+                    display: none;
+                    transition: all 0.5;
+                }
+                &:hover::after {
+                    display: block;
+                    opacity: 0.5;
+                }
+                &:hover img {
+                    transform: scale(1.08, 1.08);
+                }
+                &:hover {
+                    transform: translateY(-6px);
+                }
+                &:hover .content .hover_content {
+                    display: block;
+                    opacity: 1;
+                    // transform: translateY(0);
+                }
+                &:hover .content {
+                    bottom: 28px;
+                }
+                cursor: pointer;
+                .background {
+                    overflow: hidden;
+                    border-radius: 12px;
+                    img {
+                        border-radius: 12px;
+                        width: 100%;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about {
+    padding: 50px 0;
+    .about {
+        .col-lg-5 {
+            img {
+                width: 100%;
+                border-radius: 12px;
+            }
+        }
+        .about_right {
+            .about_right_top {
+                text-align: left;
+                p {
+                    width: 100%;
+                    line-height: 1.8;
+                    display: block;
+                    font-size: 1.1rem;
+                }
+            }
+            .about_right_bottom {
+                .nav-tabs {
+                    border: 1px solid $p-color;
+                    border-radius: 24px;
+                    .nav-item .nav-link.active {
+                        border: 2px solid $primary-color;
+                        color: white;
+                        border-radius: 24px;
+                        background-color: $primary-color;
+                    }
+                    .nav-item .nav-link:hover {
+                        border: 1px solid transparent;
+                    }
+                    .nav-item .nav-link {
+                        color: $p-color;
+                    }
+                }
+            }
+        }
+    }
+    .about_bottom {
+        .list-avatar {
+            ul {
+                li {
+                    margin-bottom: 30px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: rgba(255, 255, 255, 0.4);
+                    }
+                    img {
+                        border-radius: 8px;
+                        cursor: pointer;
+                        width: 100%;
+                    }
+                }
+                li:nth-child(1) {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: rgba(255, 255, 255, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+@import "responsive_pc";
+@import "responsive_tablet";
+@import "responsive_mobile";

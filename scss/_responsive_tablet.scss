@@ -1,0 +1,125 @@
+$res_tablet: "only screen and (min-width: 768px) and (max-width: 1180px)";
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+@include responsive_tablet {
+    header {
+        .navbar {
+            width: 80%;
+            margin-left: 4%;
+            .navbar-toggler {
+                border-color: #fff;
+            }
+            .menu {
+                width: 70px;
+                height: 70px;
+                i.fa-bars {
+                    font-size: 2rem;
+                    color: #fff;
+                    display: block;
+                    text-align: center;
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .nav_mobile {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                bottom: 0;
+                width: 420px;
+                background-color: #fff;
+                transition: all 1s;
+                opacity: 0;
+                .header {
+                    .logo {
+                        img {
+                            width: 160px;
+                            margin: 16px 0 0 16px;
+                        }
+                    }
+                    .close_menu {
+                        margin: 28px;
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+                .navbar-nav {
+                    margin: 16px;
+                    .nav-item {
+                        border-bottom: 1px solid #ccc;
+                        .main_menu {
+                            display: inline-flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            .nav-link {
+                                display: block;
+                                width: 360px;
+                            }
+                        }
+                        .submenu {
+                            display: block;
+                            height: 0;
+                            opacity: 0;
+                            li a {
+                                color: #282828;
+                            }
+                        }
+
+                        a {
+                            font-size: 1.2rem;
+                        }
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #banner {
+        .carousel {
+            .carousel-item {
+                img {
+                    width: 127%;
+                    height: 650px;
+                }
+                .carousel-caption {
+                    margin-top: -8%;
+                    h1 {
+                        font-size: 3rem;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                    }
+                    button {
+                        margin-top: 75px;
+                    }
+                }
+            }
+            .carousel-control-next,
+            .carousel-control-prev {
+                display: none;
+            }
+        }
+    }
+    .section_title {
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+        p {
+            width: 90%;
+        }
+    }
+    #about {
+        .about_right_top {
+            margin-top: 48px;
+        }
+    }
+}

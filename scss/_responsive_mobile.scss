@@ -1,0 +1,146 @@
+$res_mobile: "only screen and (max-width: 767px)";
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+@include responsive_mobile {
+    header {
+        .navbar {
+            .navbar-brand {
+                max-width: 200px;
+                img {
+                    width: 106px;
+                }
+            }
+            .menu {
+                width: 30px;
+                height: 30px;
+                i.fa-bars {
+                    font-size: 2rem;
+                    margin-left: 16px;
+                    color: #fff;
+                    display: block;
+                    text-align: center;
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .nav_mobile {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                bottom: 0;
+                width: 320px;
+                background-color: #fff;
+                transition: all 1s;
+                opacity: 0;
+                overflow: scroll;
+                .header {
+                    .logo {
+                        img {
+                            width: 160px;
+                            margin: 16px 0 0 16px;
+                        }
+                    }
+                    .close_menu {
+                        margin: 28px;
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+                .navbar-nav {
+                    margin: 16px;
+                    .nav-item {
+                        border-bottom: 1px solid #ccc;
+                        .main_menu {
+                            display: inline-flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 100%;
+                            .nav-link {
+                                display: block;
+                                width: 360px;
+                            }
+                        }
+                        .submenu {
+                            display: block;
+                            height: 0;
+                            opacity: 0;
+                            li a {
+                                color: #282828;
+                            }
+                        }
+
+                        a {
+                            font-size: 1.2rem;
+                        }
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #banner {
+        .carousel {
+            .carousel-item {
+                img {
+                    width: 150%;
+                    height: 500px;
+                }
+                .carousel-caption {
+                    margin-top: -8%;
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        font-size: 1rem;
+                    }
+                    button {
+                        margin-top: 30px;
+                    }
+                }
+            }
+            .carousel-control-next,
+            .carousel-control-prev {
+                display: none;
+            }
+        }
+    }
+    .section_title {
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-top: 16px;
+        }
+        p {
+            width: 90%;
+        }
+    }
+    #about {
+        .about_right_top {
+            margin-top: 32px;
+        }
+        .about .about_right .about_right_bottom .nav-tabs {
+            border: none;
+        }
+        .about_bottom {
+            .col-md-12 {
+                .font-weight-bold {
+                    font-size: 1rem;
+                }
+                .align-items-center {
+                    span.text-danger {
+                        font-size: 0.9rem;
+                    }
+                    .blockquote-footer {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
