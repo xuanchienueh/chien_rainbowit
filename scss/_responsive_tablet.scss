@@ -122,4 +122,20 @@ $res_tablet: "only screen and (min-width: 768px) and (max-width: 1180px)";
             margin-top: 48px;
         }
     }
+
+    #footer {
+        .top_footer {
+            .top_footer_right {
+                text-align: left;
+                button {
+                    padding: 18px 40px;
+                    font-size: 1rem;
+                    margin-top: 32px;
+                }
+            }
+            .top_footer_left {
+                font-size: 1.8rem;
+            }
+        }
+    }
 }

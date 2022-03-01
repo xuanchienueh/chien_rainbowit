@@ -143,4 +143,42 @@ $res_mobile: "only screen and (max-width: 767px)";
             }
         }
     }
+
+    #clients {
+        .clients_content {
+            .row {
+                border: none;
+                li {
+                    height: 100px;
+                    border: none;
+                    img {
+                        width: 60%;
+                        margin-top: -35px;
+                    }
+                }
+            }
+        }
+    }
+    #footer {
+        .top_footer {
+            .top_footer_left {
+                font-size: 1.4rem;
+            }
+            .top_footer_right {
+                text-align: left;
+                button {
+                    padding: 16px 32px;
+                    font-size: 1rem;
+                    margin-top: 32px;
+                }
+            }
+        }
+        .bottom_footer {
+            .copyright {
+                p {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
 }
