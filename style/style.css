@@ -198,17 +198,18 @@ header .navbar-collapse .navbar-nav {
       display: block;
       font-size: 1.1rem; }
   #about .about .about_right .about_right_bottom .nav-tabs {
-    border: 1px solid rgba(29, 29, 36, 0.75);
+    border: 1px solid rgba(29, 29, 36, 0.15);
     border-radius: 24px; }
     #about .about .about_right .about_right_bottom .nav-tabs .nav-item .nav-link.active {
-      border: 2px solid #fd4766;
+      border: none;
       color: white;
       border-radius: 24px;
       background-color: #fd4766; }
     #about .about .about_right .about_right_bottom .nav-tabs .nav-item .nav-link:hover {
-      border: 1px solid transparent; }
+      border: none; }
     #about .about .about_right .about_right_bottom .nav-tabs .nav-item .nav-link {
-      color: rgba(29, 29, 36, 0.75); }
+      color: rgba(29, 29, 36, 0.75);
+      border: none; }
   #about .about_bottom .list-avatar ul li {
     margin-bottom: 30px;
     position: relative; }

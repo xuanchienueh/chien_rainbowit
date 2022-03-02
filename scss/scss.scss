@@ -220,19 +220,22 @@ header {
             }
             .about_right_bottom {
                 .nav-tabs {
-                    border: 1px solid $p-color;
+                    border: 1px solid rgba(29, 29, 36, 0.15);
                     border-radius: 24px;
                     .nav-item .nav-link.active {
-                        border: 2px solid $primary-color;
+                        // border: 2px solid $primary-color;
+                        border: none;
                         color: white;
                         border-radius: 24px;
                         background-color: $primary-color;
                     }
                     .nav-item .nav-link:hover {
-                        border: 1px solid transparent;
+                        // border: 2px solid transparent;
+                        border: none;
                     }
                     .nav-item .nav-link {
                         color: $p-color;
+                        border: none;
                     }
                 }
             }
