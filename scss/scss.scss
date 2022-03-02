@@ -246,31 +246,38 @@ header {
             ul {
                 li {
                     margin-bottom: 30px;
-                    position: relative;
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(255, 255, 255, 0.4);
+                    a {
+                        display: block;
+                        position: relative;
+                        transition: all 0.5s;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            background-color: rgba(255, 255, 255, 0.4);
+                        }
+                    }
+                    a.active {
+                        display: block;
+                        position: relative;
+                        transform: scale(1.1, 1.1);
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            bottom: 0;
+                            background-color: transparent;
+                        }
                     }
                     img {
                         border-radius: 8px;
                         cursor: pointer;
                         width: 100%;
-                    }
-                }
-                li:nth-child(1) {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        background-color: rgba(255, 255, 255, 0);
                     }
                 }
             }
